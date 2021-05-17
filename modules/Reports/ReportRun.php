@@ -253,19 +253,19 @@ class ReportRunQueryPlanner {
 					}
 				}
 			}
-			if (!empty($newAdvFilterList) && (count($newAdvFilterList[$i]))) {
+			if (count($newAdvFilterList[$i])) {
 				$newAdvFilterList[$i]['condition'] = $advfilterlist[$i]['condition'];
 			}
 			if (isset($newAdvFilterList[$i]['columns'][$k - 1])) {
 				$newAdvFilterList[$i]['columns'][$k - 1]['column_condition'] = '';
 			}
-			if (!empty($newAdvFilterList) && (count($newAdvFilterList[$i]) != 2)) {
+			if (count($newAdvFilterList[$i]) != 2) {
 				unset($newAdvFilterList[$i]);
 			}
 		}
 		end($newAdvFilterList);
 		$lastConditionsGrpKey = key($newAdvFilterList);
-		if (!empty($newAdvFilterList) && (count($newAdvFilterList[$lastConditionsGrpKey]))) {
+		if (count($newAdvFilterList[$lastConditionsGrpKey])) {
 			$newAdvFilterList[$lastConditionsGrpKey]['condition'] = '';
 		}
 
@@ -325,18 +325,15 @@ class ReportRun extends CRMEntity {
 	 *  To ensure single-instance is present for $reportid
 	 *  as we optimize using ReportRunPlanner and setup temporary tables.
 	 */
-        function __construct($reportid) {
-            $oReport = new Reports($reportid);
-            $this->reportid = $reportid;
-            $this->primarymodule = $oReport->primodule;
-            $this->secondarymodule = $oReport->secmodule;
-            $this->reporttype = $oReport->reporttype;
-            $this->reportname = $oReport->reportname;
-            $this->queryPlanner = new ReportRunQueryPlanner();
-            $this->queryPlanner->reportRun = $this;
-        }
 	function ReportRun($reportid) {
-            self::__construct($reportid);
+		$oReport = new Reports($reportid);
+		$this->reportid = $reportid;
+		$this->primarymodule = $oReport->primodule;
+		$this->secondarymodule = $oReport->secmodule;
+		$this->reporttype = $oReport->reporttype;
+		$this->reportname = $oReport->reportname;
+		$this->queryPlanner = new ReportRunQueryPlanner();
+		$this->queryPlanner->reportRun = $this;
 	}
 
 	public static function getInstance($reportid) {
@@ -381,7 +378,7 @@ class ReportRun extends CRMEntity {
             $selectedModuleFields[$module][] = $fieldname;
 			$inventory_fields = array('serviceid');
 			$inventory_modules = getInventoryModules();
-			if (empty($permitted_fields[$module]) && $is_admin == false && $profileGlobalPermission[1] == 1 && $profileGlobalPermission[2] == 1) {
+			if (sizeof($permitted_fields[$module]) == 0 && $is_admin == false && $profileGlobalPermission[1] == 1 && $profileGlobalPermission[2] == 1) {
 				$permitted_fields[$module] = $this->getaccesfield($module);
 			}
 			if (in_array($module, $inventory_modules)) {

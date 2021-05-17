@@ -1,4 +1,4 @@
-version: "3"
+version: "3.7"
 
 networks:
   default:
@@ -20,15 +20,15 @@ services:
 
   db:
     build: docker/mysql
-    volumes:
-      - ./docker/mysql/conf.d:/etc/mysql/conf.d
-      - ./var/mysql:/var/lib/mysql
-    command: --default-authentication-plugin=mysql_native_password
     restart: always
+    volumes:
+      - ./docker/mysql/config/my.cnf:/etc/mysql/my.cnf
+      - ./var/mysql:/var/lib/mysql
     environment:
-      MYSQL_USER: vtiger
-      MYSQL_PASS: vtiger
-      MYSQL_ROOT_PASSWORD: root
+      - MYSQL_ROOT_PASSWORD=root
+      - MYSQL_DATABASE=vtiger
+      - MYSQL_USER=vtiger
+      - MYSQL_PASS=vtiger
 
   adminer:
     image: adminer

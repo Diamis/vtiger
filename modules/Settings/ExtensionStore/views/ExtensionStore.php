@@ -57,6 +57,9 @@ class Settings_ExtensionStore_ExtensionStore_View extends Settings_Vtiger_Index_
 				if (!empty($customerCardId)) {
 					$this->customerCardInfo = $modelInstance->getCardDetails($customerCardId);
 				}
+			} else {
+				$modelInstance->unsetPassword();
+				$this->passwordStatus = false;
 			}
 		}
 	}

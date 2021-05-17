@@ -1,17 +1,17 @@
-<?php /* Smarty version Smarty-3.1.7, created on 2021-05-17 09:09:15
+<?php /* Smarty version Smarty-3.1.7, created on 2021-05-17 19:53:11
          compiled from "/var/www/html/includes/runtime/../../layouts/v7/modules/Install/Step4.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:203946912760a224ab6ed0d4-45786931%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:40370843160a2bb970823a3-50744772%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '0ac8f8e4c827bd140ce005cab26742ee54a0074b' => 
     array (
       0 => '/var/www/html/includes/runtime/../../layouts/v7/modules/Install/Step4.tpl',
-      1 => 1602587794,
+      1 => 1572870387,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '203946912760a224ab6ed0d4-45786931',
+  'nocache_hash' => '40370843160a2bb970823a3-50744772',
   'function' => 
   array (
   ),
@@ -33,9 +33,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.7',
-  'unifunc' => 'content_60a224ab71d07',
+  'unifunc' => 'content_60a2bb971b608',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_60a224ab71d07')) {function content_60a224ab71d07($_smarty_tpl) {?>
+<?php if ($_valid && !is_callable('content_60a2bb971b608')) {function content_60a2bb971b608($_smarty_tpl) {?>
 
 <form class="form-horizontal" name="step4" method="post" action="index.php">
 	<input type=hidden name="module" value="Install" />

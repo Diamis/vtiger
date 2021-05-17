@@ -31,7 +31,7 @@ $CALENDAR_DISPLAY = 'true';
 $USE_RTE = 'true';
 
 // helpdesk support email id and support name (Example: 'support@vtiger.com' and 'vtiger support')
-$HELPDESK_SUPPORT_EMAIL_ID = 'admin@emial.com';
+$HELPDESK_SUPPORT_EMAIL_ID = 'admin@email.com';
 $HELPDESK_SUPPORT_NAME = 'your-support name';
 $HELPDESK_SUPPORT_EMAIL_REPLY_ID = $HELPDESK_SUPPORT_EMAIL_ID;
 
@@ -119,6 +119,9 @@ $list_max_entries_per_page = '20';
 // history_max_viewed default value = 5
 $history_max_viewed = '5';
 
+// default_module default value = Home
+$default_module = 'Home';
+
 // default_action default value = index
 $default_action = 'index';
 
@@ -156,7 +159,7 @@ $display_empty_home_blocks = false;
 $disable_stats_tracking = false;
 
 // Generating Unique Application Key
-$application_unique_key = '079cbd8ce4a8d8f6486e27da67eb2e85';
+$application_unique_key = 'bb7ce061605cf14c977bd56be7a65f9c';
 
 // trim descriptions, titles in listviews to this value
 $listview_max_textlength = 40;

@@ -952,8 +952,6 @@ Vtiger.Class("Calendar_Calendar_Js", {
 			app.request.post({data: dataParams}).then(function (e, data) {
 				if (!e) {
 					widgetBody.html(data);
-                                        let fullCalendarViewHeight = $('.fc-view-container').height();
-                                        widgetBody.css('max-height', (fullCalendarViewHeight - 10) + 'px');
 					app.helper.showVerticalScroll(
 							widgetBody,
 							{

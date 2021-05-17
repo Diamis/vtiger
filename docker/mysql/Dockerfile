@@ -1,7 +1,4 @@
-FROM mysql:8.0
-
-
-RUN chmod 0444 -R /etc/mysql/conf.d
-
+FROM mysql:5.5
+ 
 EXPOSE 3306 
 CMD ["mysqld"]

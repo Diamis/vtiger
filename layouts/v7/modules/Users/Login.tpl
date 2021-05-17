@@ -15,6 +15,7 @@
 			background-position: center;
 			background-size: cover;
 			width: 100%;
+			height: 96%;
 			background-repeat: no-repeat;
 		}
 		hr {
@@ -63,14 +64,14 @@
 			width: 50%;
 		}
 		#page {
-			padding-top: 86px;
+			padding-top: 6%;
 		}
 		.widgetHeight {
 			height: 410px;
 			margin-top: 20px !important;
 		}
 		.loginDiv {
-			max-width: 380px;
+			width: 380px;
 			margin: 0 auto;
 			border-radius: 4px;
 			box-shadow: 0 0 10px gray;
@@ -203,8 +204,8 @@
 	</style>
 
 	<span class="app-nav"></span>
-	<div class="container-fluid loginPageContainer">
-		<div class="col-lg-5 col-md-12 col-sm-12 col-xs-12">
+	<div class="col-lg-12">
+		<div class="col-lg-5">
 			<div class="loginDiv widgetHeight">
 				<img class="img-responsive user-logo" src="layouts/v7/resources/Images/vtiger.png">
 				<div>
@@ -254,11 +255,11 @@
 			</div>
 		</div>
 
-		<div class="col-lg-1 hidden-xs hidden-sm hidden-md">
+		<div class="col-lg-1">
 			<div class="separatorDiv"></div>
 		</div>
 
-		<div class="col-lg-5 hidden-xs hidden-sm hidden-md">
+		<div class="col-lg-5">
 			<div class="marketingDiv widgetHeight">
 				{if $JSON_DATA}
 					<div class="scrollContainer">
